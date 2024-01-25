@@ -139,7 +139,7 @@
     name: 'go-build-repo-mod'
     entry: go-build-repo-mod.sh
     files: '(\.go$)|(\bgo\.mod$)'
-    exclude: '(^|/)vendor/'
+    exclude: '(^|/)vendor/|(^|/)images/caches/'
     language: 'script'
     description: "Run 'cd $(mod_root); go build -o /dev/null [$ARGS] ./...' for each module in the repo"
     pass_filenames: false
@@ -316,7 +316,7 @@
     name: 'go-mod-tidy-repo'
     entry: go-mod-tidy-repo.sh
     files: '(\.go$)|(\bgo\.mod$)'
-    exclude: '(^|/)vendor/'
+    exclude: '(^|/)vendor/|(^|/)images/caches/'
     language: 'script'
     description: "Run 'cd $(mod_root); go mod tidy [$ARGS]' for each module in the repo"
     pass_filenames: false
@@ -654,7 +654,7 @@
     name: 'go-test-repo-mod'
     entry: go-test-repo-mod.sh
     files: '(\.go$)|(\bgo\.mod$)'
-    exclude: '(^|/)vendor/'
+    exclude: '(^|/)vendor/|(^|/)images/caches/'
     language: 'script'
     description: "Run 'cd $(mod_root); go test [$ARGS] ./...' for each module in the repo"
     pass_filenames: false
@@ -802,7 +802,7 @@
     name: 'golangci-lint-repo-mod'
     entry: golangci-lint-repo-mod.sh
     files: '(\.go$)|(\bgo\.mod$)'
-    exclude: '(^|/)vendor/'
+    exclude: '(^|/)vendor/|(^|/)images/caches/'
     language: 'script'
     description: "Run 'cd $(mod_root); golangci-lint run [$ARGS] ./...' for each module in the repo"
     pass_filenames: false
